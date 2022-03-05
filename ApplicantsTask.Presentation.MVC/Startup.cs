@@ -74,7 +74,7 @@ namespace ApplicantsTask.Presentation.MVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=ApplicantClient}/{action=Index}/{id?}");
             });
         }
     }
