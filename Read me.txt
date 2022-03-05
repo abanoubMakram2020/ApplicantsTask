@@ -2,8 +2,8 @@ Used Tools:
 - Visual Studio 2022
 - SQL Server 2014
 
-Used Technologies:
-- Backend(.Net 5)
+Used Technologies(.Net 5):
+- Backend(API Core)
 - FrontEnd(MVC Core)
 
 -Used  'Clean Architecture' to build solution
