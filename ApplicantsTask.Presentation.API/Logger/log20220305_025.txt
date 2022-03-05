@@ -1,0 +1,21 @@
+2022-03-05 04:41:05.768 +02:00 [INF] Route matched with {action = "GetAll", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ApplicantsTask.Presentation.API.Controllers.ApplicantController (ApplicantsTask.Presentation.API).
+2022-03-05 04:41:06.671 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'ApplicantsTaskDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-03-05 04:41:07.661 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Address], [a].[Age], [a].[CountryOfOrigion], [a].[CreatedBy], [a].[CreationDate], [a].[EmailAddress], [a].[FamilyName], [a].[Hired], [a].[ModificationDate], [a].[ModifiedBy], [a].[Name]
+FROM [Applicant] AS [a]
+2022-03-05 04:41:07.935 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2022-03-05 04:41:07.943 +02:00 [INF] Executed action ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API) in 2156.9766ms
+2022-03-05 04:41:43.347 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-03-05 04:41:43.841 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-05 04:41:43.841 +02:00 [INF] Hosting environment: Development
+2022-03-05 04:41:43.841 +02:00 [INF] Content root path: D:\Abanoub\ApplicantsTask\ApplicantsTask.Presentation.API
+2022-03-05 04:41:43.877 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-03-05 04:41:44.160 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 288.0234ms
+2022-03-05 04:41:44.163 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-03-05 04:41:44.178 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 8.4262ms
+2022-03-05 04:41:44.773 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1.0/swagger.json - -
+2022-03-05 04:41:44.966 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 192.9353ms
+2022-03-05 04:41:46.778 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44364/api/v1/Applicant/GetAll - -
+2022-03-05 04:41:46.845 +02:00 [INF] Executing endpoint 'ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API)'
+2022-03-05 04:41:48.920 +02:00 [INF] Executed endpoint 'ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API)'
+2022-03-05 04:41:48.928 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:44364/api/v1/Applicant/GetAll - - - 200 834 application/json 2149.3506ms

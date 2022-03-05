@@ -1,0 +1,21 @@
+{
+  "Successfully": "Process comlpeted successfully",
+  "GeneralError": "Something went wronge, try again shortly.",
+
+  "FailedToInsert": "Failed To Insert",
+  "FailedToDelete": "Faild to Delete",
+  "FailedToUpdate": "Faild to Update",
+
+  "NoChanges": "No changes Occurs",
+
+  "InvalidData": "Invalid Data.",
+  "EmptyData": "Empty Data.",
+  "NullValue": "Null Value.",
+
+  "UnAuthorized": "Something went wronge, try again shortly.",
+  "NotDataFound": "No Data Available.",
+  "InvalidCredentials": "Email or password may be incorrect.",
+  "InvalidEmail": "Invalid Email format.",
+  "ApplicantNotExist": "Applicant Not Exist",
+  "AlreadAuthorized": "you already authrized"
+}

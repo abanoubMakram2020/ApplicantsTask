@@ -1,0 +1,10 @@
+{
+  "AuthSettings": {
+    "TokenExpirationMinutes": 30,
+    "Secret": "pQyq-OoHckNHYIDm8ivyH0tlTxhHkNfMkR9Jzv3vvVurkua1QsqoJp6rvD69f60RpAXzcuGBNovBQnKC-TvHc2iG5jRPiHF06760EM_yZS8T_Xz9A2QXSwRLLUcseAfQdPVF-i0XbcaWdYd2nY2woS5aw5UXFRvbSXPvkKGO8OjqpTz-EuW2fA3UvWZEM9qJOVAQqFUMO2M1_HBIhiB5uRTHGUOu-sf0dxsqt_S3GZPPimDEB_5zKT0BZ4eRXK7I0iua-iC5uYgeSg4b1TGlmIU4ctw68a66vYxxY_fvmH0uRxtXeXYdJy17LTehQWTohzNEdK83F8eAoOSXB-qaoQ",
+    "Issuer": "https://localhost:5002",
+    "RequireHttpsMetadata": false,
+    "WebAudiance": "Complaint.Web",
+    "MobileAudiance": "Complaint.Mobile"
+  }
+}

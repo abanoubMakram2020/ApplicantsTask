@@ -1,0 +1,15 @@
+﻿{
+  "ApplicantNameValidation": "أسم المتقدم يجب أن لا يقل عن 5 أحرف وأن لايزيد عن 50 حرف",
+  "ApplicantFamilyNameValidation": "أسم عائلة المتقدم يجب أن لا يقل عن 5 أحرف وأن لايزيد عن 50 حرف",
+  "ApplicantAddressValidation": "عنوان المتقدم يجب أن لا يقل عن 10 أحرف وأن لايزيد عن 50 حرف",
+  "ApplicantEmailValidation": "ألأيميل غير صحيح",
+  "ApplicantAgeValidation": "عمر المتقدم يجب أن يكون ما بين 20  الي 60",
+  "ApplicantCountryValidation": "أسم الدولة غير موجود",
+  "ApplicantAlreadyExist": "المتقدم موجود بالفعل",
+  "ApplicantHiredValidation": "يجب تحديد أذا كان تم توظيف المتقدم أو لا",
+
+  "UserFullNameValidation": "الاسم بالكامل يجب أن لا يقل عن 5 أحرف وأن لايزيد عن 50 حرف",
+  "UserUserNameValidation": "أسم المستخدم يجب أن لا يقل عن 5 أحرف وأن لايزيد عن 50 حرف",
+  "UserPasswordValidation": "الرقم السري غير قوي",
+  "UserNameAlreadyExist": "أسم المستخدم موجود من قبل"
+}

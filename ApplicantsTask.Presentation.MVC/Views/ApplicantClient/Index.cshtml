@@ -1,0 +1,87 @@
+﻿
+@model List<ApplicantsTask.Presentation.MVC.DTOs.OutputDTOs.ApplicantOutputDTO>
+
+@{
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+}
+
+<div class="box">
+    <div class="box-header">
+        <div class="row">
+            <div class="col-md-3">
+                <h3 class="box-title">Applicants</h3>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <a class="btn btn-primary" id="Edite_status" href="@Url.Action("CreateOrUpdate","ApplicantClient")">
+                    Add New Applicant
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="tblApplicants" class="table direction table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th> Name</th>
+                    <th> Family Name</th>
+                    <th>Address</th>
+                    <th>Country</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Hired</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var applicant in Model)
+                {
+                    <tr>
+                        <td>@(++i)</td>
+                        <td>@applicant.Name</td>
+                        <td>@applicant.FamilyName</td>
+                        <td>@applicant.Address</td>
+                        <td>@applicant.CountryOfOrigion</td>
+                        <td>@applicant.Age</td>
+                        <td>@applicant.EmailAddress</td>
+                        <td>@(applicant.Hired?"Yes":"No")</td>
+                       
+                        <td>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a class="label label-warning" id="Edite_status" href="@Url.Action("CreateOrUpdate", new {applicantId= applicant.Id})">
+                                       Edit
+                                    </a>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <a class='label label-danger' href="@Url.Action("Delete", new { applicantId=applicant.Id})">
+                                      Delete
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+
+<script>
+    $(function () {
+        $("#tblApplicants").DataTable();
+
+    });
+ 
+</script>

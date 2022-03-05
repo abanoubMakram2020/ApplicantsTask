@@ -1,0 +1,49 @@
+2022-03-05 04:43:22.417 +02:00 [INF] Route matched with {action = "GetAll", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ApplicantsTask.Presentation.API.Controllers.ApplicantController (ApplicantsTask.Presentation.API).
+2022-03-05 04:43:23.236 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'ApplicantsTaskDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-03-05 04:43:24.230 +02:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Address], [a].[Age], [a].[CountryOfOrigion], [a].[CreatedBy], [a].[CreationDate], [a].[EmailAddress], [a].[FamilyName], [a].[Hired], [a].[ModificationDate], [a].[ModifiedBy], [a].[Name]
+FROM [Applicant] AS [a]
+2022-03-05 04:43:24.518 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2022-03-05 04:43:24.532 +02:00 [INF] Executed action ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API) in 2094.6428ms
+2022-03-05 04:43:47.534 +02:00 [INF] Route matched with {action = "Delete", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ApplicantsTask.Presentation.API.Controllers.ApplicantController (ApplicantsTask.Presentation.API).
+2022-03-05 04:43:47.584 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'ApplicantsTaskDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-03-05 04:43:47.763 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Address], [a].[Age], [a].[CountryOfOrigion], [a].[CreatedBy], [a].[CreationDate], [a].[EmailAddress], [a].[FamilyName], [a].[Hired], [a].[ModificationDate], [a].[ModifiedBy], [a].[Name]
+FROM [Applicant] AS [a]
+WHERE [a].[Id] = @__p_0
+2022-03-05 04:43:47.884 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Applicant]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-03-05 04:43:47.912 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2022-03-05 04:43:47.912 +02:00 [INF] Executed action ApplicantsTask.Presentation.API.Controllers.ApplicantController.Delete (ApplicantsTask.Presentation.API) in 378.2515ms
+2022-03-05 04:43:47.932 +02:00 [INF] Route matched with {action = "GetAll", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ApplicantsTask.Presentation.API.Controllers.ApplicantController (ApplicantsTask.Presentation.API).
+2022-03-05 04:43:47.946 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'ApplicantsTaskDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-03-05 04:43:47.951 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Address], [a].[Age], [a].[CountryOfOrigion], [a].[CreatedBy], [a].[CreationDate], [a].[EmailAddress], [a].[FamilyName], [a].[Hired], [a].[ModificationDate], [a].[ModifiedBy], [a].[Name]
+FROM [Applicant] AS [a]
+2022-03-05 04:43:47.952 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2022-03-05 04:43:47.952 +02:00 [INF] Executed action ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API) in 20.1464ms
+2022-03-05 04:43:52.465 +02:00 [INF] Route matched with {action = "GetById", controller = "Applicant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Nullable`1[System.Int32]) on controller ApplicantsTask.Presentation.API.Controllers.ApplicantController (ApplicantsTask.Presentation.API).
+2022-03-05 04:43:52.466 +02:00 [INF] Entity Framework Core 5.0.14 initialized 'ApplicantsTaskDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-03-05 04:43:52.483 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__Id_Data_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Address], [a].[Age], [a].[CountryOfOrigion], [a].[CreatedBy], [a].[CreationDate], [a].[EmailAddress], [a].[FamilyName], [a].[Hired], [a].[ModificationDate], [a].[ModifiedBy], [a].[Name]
+FROM [Applicant] AS [a]
+WHERE [a].[Id] = @__Id_Data_0
+2022-03-05 04:43:52.489 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/json
+2022-03-05 04:43:52.489 +02:00 [INF] Executed action ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetById (ApplicantsTask.Presentation.API) in 23.8033ms
+2022-03-05 04:45:44.856 +02:00 [INF] User profile is available. Using 'C:\Users\A.Makram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-03-05 04:45:45.232 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-05 04:45:45.233 +02:00 [INF] Hosting environment: Development
+2022-03-05 04:45:45.233 +02:00 [INF] Content root path: D:\Abanoub\ApplicantsTask\ApplicantsTask.Presentation.API
+2022-03-05 04:45:45.263 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/index.html - -
+2022-03-05 04:45:45.559 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/index.html - - - 200 - text/html;charset=utf-8 299.0073ms
+2022-03-05 04:45:45.586 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - -
+2022-03-05 04:45:45.603 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 14.3839ms
+2022-03-05 04:45:46.793 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44364/swagger/v1.0/swagger.json - -
+2022-03-05 04:45:47.084 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44364/swagger/v1.0/swagger.json - - - 200 - application/json;charset=utf-8 290.8162ms
+2022-03-05 04:45:47.851 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44364/api/v1/Applicant/GetAll - -
+2022-03-05 04:45:47.921 +02:00 [INF] Executing endpoint 'ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API)'
+2022-03-05 04:45:50.120 +02:00 [INF] Executed endpoint 'ApplicantsTask.Presentation.API.Controllers.ApplicantController.GetAll (ApplicantsTask.Presentation.API)'
+2022-03-05 04:45:50.126 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:44364/api/v1/Applicant/GetAll - - - 200 438 application/json 2275.4098ms

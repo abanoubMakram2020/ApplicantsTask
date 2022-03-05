@@ -1,0 +1,18 @@
+﻿{
+  "ApplicantNameValidation": "Name length should at least 5 Characters and not more than 50 Characters",
+  "ApplicantFamilyNameValidation": "Family name length should at least 5 Characters and not more than 50 Characters",
+  "ApplicantAddressValidation": "Address length should at least 10 Characters and not more than 50 Characters",
+  "ApplicantEmailValidation": "Email not Valid",
+  "ApplicantAgeValidation": "Age must be between 20 and 60",
+  "ApplicantCountryValidation": "Country is not valid",
+  "ApplicantAlreadyExist": "Applicant Already Exist.",
+  "ApplicantHiredValidation": "Provide if applicant hired or not",
+
+  "UserFullNameValidation": "Full name  length should at least 5 Characters and not more than 50 Characters",
+  "UserUserNameValidation": "User name  length should at least 5 Characters and not more than 50 Characters",
+  "UserPasswordValidation": "Password not valid",
+  "UserNameAlreadyExist": "User name already exists"
+
+
+
+}

@@ -1,0 +1,21 @@
+﻿{
+  "Successfully": "تمت العمليه بنجاح",
+  "GeneralError": "حدث خطأ ، يرجى المحاولة مرة أخرى",
+
+  "FailedToInsert": "حدث خطأ ، لا يمكن الإضافة ",
+  "FailedToDelete": "حدث خطأ ، لا يمكن الحذف ",
+  "FailedToUpdate": "حدث خطأ ، لا يمكن التعديل ",
+
+  "NoChanges": "لا يوجد تغييرات حدثت",
+
+  "InvalidData": "بيانات غير صالحة",
+  "EmptyData": "بيانات فارغة",
+  "NullValue": "بيانات فارغة",
+
+  "UnAuthorized": "حدث خطأ ، يرجى المحاولة مرة أخرى",
+  "NotDataFound": "حدث خطأ ، يرجى المحاولة مرة أخرى",
+  "InvalidCredentials": "حدث خطأ ، يرجى المحاولة مرة أخرى",
+  "InvalidEmail": "حدث خطأ ، يرجى المحاولة مرة أخرى",
+  "ApplicantNotExist": "المتقدم غير موجود",
+  "AlreadAuthorized": "انت بالفعل لديك صلاحية"
+}
