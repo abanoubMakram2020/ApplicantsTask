@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApplicantsTask.Infra.Data.Migrations
 {
     [DbContext(typeof(ApplicantsTaskDBContext))]
-    [Migration("20220304195038_InitialCreate")]
+    [Migration("20220305042130_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,12 +71,7 @@ namespace ApplicantsTask.Infra.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Applicant");
                 });
@@ -112,18 +107,6 @@ namespace ApplicantsTask.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("ApplicantsTask.Domain.Entities.Applicant", b =>
-                {
-                    b.HasOne("ApplicantsTask.Domain.Entities.User", null)
-                        .WithMany("Applicants")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("ApplicantsTask.Domain.Entities.User", b =>
-                {
-                    b.Navigation("Applicants");
                 });
 #pragma warning restore 612, 618
         }
