@@ -1,6 +1,7 @@
 ﻿using ApplicantsTask.Presentation.MVC.DTOs.InputDTOs;
 using ApplicantsTask.Presentation.MVC.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using SharedKernal.Common.Enum;
 using System.Threading.Tasks;
 
 namespace ApplicantsTask.Presentation.MVC.Controllers
@@ -26,18 +27,15 @@ namespace ApplicantsTask.Presentation.MVC.Controllers
             {
                 var (Applicant, Message) = await _applicantClientService.GetById(applicantId);
 
-                applicantModel = new ApplicantInputDTO
-                {
-                    Id = Applicant.Id,
-                    Name = Applicant.Name,
-                    FamilyName = Applicant.FamilyName,
-                    Address = Applicant.Address,
-                    CountryOfOrigion = Applicant.CountryOfOrigion,
-                    Age = Applicant.Age,
-                    EmailAddress = Applicant.EmailAddress,
-                    Hired = Applicant.Hired,
+                applicantModel.Id = Applicant.Id;
+                applicantModel.Name = Applicant.Name;
+                applicantModel.FamilyName = Applicant.FamilyName;
+                applicantModel.Address = Applicant.Address;
+                applicantModel.CountryOfOrigion = Applicant.CountryOfOrigion;
+                applicantModel.Age = Applicant.Age;
+                applicantModel.EmailAddress = Applicant.EmailAddress;
+                applicantModel.Hired = Applicant.Hired;
 
-                };
             }
 
             return View(applicantModel);
@@ -45,10 +43,13 @@ namespace ApplicantsTask.Presentation.MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateOrUpdate(ApplicantInputDTO applicantInputDTO)
         {
-            var (StatusCode, Message,Errors) = await _applicantClientService.Save(applicantInputDTO);
-            return RedirectToAction(nameof(Index));
+            var (StatusCode, Message, Errors) = await _applicantClientService.Save(applicantInputDTO);
+            if (StatusCode == (int)ResponseStatusCode.Successfully)
+                return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(CreateOrUpdate), new { applicantId = applicantInputDTO.Id });
         }
 
         public async Task<IActionResult> Delete(int applicantId)

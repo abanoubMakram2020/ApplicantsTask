@@ -26,8 +26,9 @@ namespace ApplicantsTask.Presentation.MVC.Services.Implementation
             var apiResult = await _commonHandle.Handle<ResponseResultDto<ApplicantOutputDTO>, string>(methodUrl: $"{ProjectConfiguration.APIURLs.GET_APPLICANT_BY_ID}",
                 body: string.Empty, qs: queryString, methodType: SharedKernal.Common.Enum.HttpMethod.Get);
 
-            return (apiResult.Result, apiResult.Message);
-
+            if (apiResult.StatusCode == ResponseStatusCode.Successfully)
+                return (apiResult.Result, apiResult.Message);
+            return (new ApplicantOutputDTO(), apiResult.Message);
         }
 
         public async Task<(List<ApplicantOutputDTO> Applicant, string Message)> GetAll()
@@ -46,8 +47,7 @@ namespace ApplicantsTask.Presentation.MVC.Services.Implementation
             var apiResult = await _commonHandle.Handle<ResponseResultDto<bool>, BaseRequestDto<ApplicantInputDTO> >(methodUrl: $"{ProjectConfiguration.APIURLs.GET_CREATE_UPDATE_APPLICANT}",
                 body: request, qs: null, methodType: SharedKernal.Common.Enum.HttpMethod.Post);
 
-
-            return ((int)apiResult.StatusCode, apiResult.Message, apiResult.Errors);
+                return ((int)apiResult.StatusCode, apiResult.Message, apiResult.Errors);
         }
 
         public async Task<(bool Result, string Message)> Delete(int applicantId)

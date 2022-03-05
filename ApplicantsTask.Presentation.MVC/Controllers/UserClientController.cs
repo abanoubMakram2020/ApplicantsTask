@@ -18,6 +18,7 @@ namespace ApplicantsTask.Presentation.MVC.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegistrationDTO registrationDTO)
         {
             var (StatusCode, Message, Errors) = await _userClientService.Register(registrationDTO);
@@ -30,6 +31,7 @@ namespace ApplicantsTask.Presentation.MVC.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginDTO loginDTO)
         {
             var (TokenDTO, Message) = await _userClientService.Login(loginDTO);
