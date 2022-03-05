@@ -1,0 +1,65 @@
+Used Tools:
+- Visual Studio 2022
+- SQL Server 2014
+
+Used Technologies:
+- Backend(.Net 5)
+- FrontEnd(MVC Core)
+
+-Used  'Clean Architecture' to build solution
+-Design Patten 'Generic Repository'  with 'Unit Of Work'
+
+- Set Localization Coniguration to can use many languages.
+-Set Versiniong Coniguration  as if we need to implement more than one version.
+- Used JWT to Secure API (note that i didn't handle Athauontcation on front end , only set authrize attribute on base Control when i use post man or swagger to secure API ).
+-Create Cutom middleware to handle exception and log  operations,i used 'Serilog' libarabry.
+-Used Automapper.
+- Used fluent validation to validate input data on backend nad used data annotaion  validation to validate on frontend.
+-Used EF Core and migrate created entities.
+-Used httpClient tovalidate country.    
+
+
+Exists Features as (Back End):
+- Create user
+-Login and return token which used to authorize others APIs
+-Get All Applicants.
+-Get Applcant By Id.
+-Create Or Update  Applicant.
+-Delete Applicant By Id.
+
+
+Exists Features as (Front End):
+- Show all applicants with datatable
+-Form to add and edit
+-Button to delete or edit
+ 
+-Note: Registration and Login And Authorize  not Handled on Front End "Due to lack of time"
+
+
+-Steps to download , build and run solution:
+ - After Clone Project from GitHup to check backend only(Collectio,Swegger)
+   1- Run migration to create database on your local server.
+   2- To use sent collection or swagger to authorize API ,Kindly Uncomment authorize attrubite from BaseController on API project .
+  3- build solution and run 'ApplicantsTask.Presentation.API' only.
+ 4- Add new user , lgoin and get returend token to authorize other APIz.
+ 5- add, updete,delete ,get all applicants. 
+
+-To check BackEnd and FrontEnd at the same time 
+ 1- kindly comment authorize attrubite from BaseController on API project .
+2- Change port on base url of  endpoints in appsetting.json of  ''ApplicantsTask.Presentation.MVC' 
+3- Set project 'ApplicantsTask.Presentation.API' and 'ApplicantsTask.Presentation.MVC' as start projects and run.
+4- will appear Index page with all applicants if exists,button to add new applicant , button to edit and button delete
+
+
+-Collection URL:- 
+  https://www.getpostman.com/collections/813d1ef382895e624aa3  
+
+ 
+
+
+ 
+
+
+
+
+
